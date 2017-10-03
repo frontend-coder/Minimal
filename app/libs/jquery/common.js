@@ -7,36 +7,52 @@ $('.parallax-window').parallax({
     naturalHeight: 400
   });
 
-
-
-
-
-
-
+// вверхнее красиво-вращающееся меню
+// 1 и 2 строка это анимация крестика
+//3 строка - слайдер вниз меню
+$(".toggle-mnu").click(function() {
+$(this).toggleClass("on");
+$(".hidden-mnu").slideToggle();
+return false;
+});
+$('body, .top-menu ul li a').click(function () {
+$('.hidden-mnu').hide("slow");
+});
 
 // pagination on lending pages
-$('.top_line_nenu ul li a').mPageScroll2id({
+$('.top-menu ul li a, .hidden-mnu ul li a').mPageScroll2id({
 layout                 : "auto",
-offset                 : ".top_line",
+offset                 : ".top-line",
 scrollEasing           : "linear",
 highlightByNextTarget  : true,
 keepHighlightUntilNext : true,
 autoScrollSpeed        : true,
 scrollSpeed            : 1000
 });
-var $icon = $('.hamburger');
-var API = $('#top_line_nenu').data('mmenu');
-$icon.on( "click", function() {
-   API.open();
+
+// всплывающие окна обратной связи позвонить мне
+$("a[href='#call-back']").magnificPopup ({
+  mainClass:'mfp-fade',
+  removalDelay:400,
+  type:'inline',
 });
 
-API.bind( "open:finish", function() {
-    $icon.addClass( "is-active" );
+
+/*чтобы в формах был индивидуальный заголовок */
+$("a[href='#call-back']").click(function(){
+  var dataForm = $(this).data("form");
+  var dataText = $(this).data("text");
+  $(".forms-call h4").text(dataText);
+  $(".forms-call [name=admin-data]").val(dataForm);
 });
 
-API.bind( "close:finish", function() {
- $icon.removeClass( "is-active" );
-});
+
+
+
+
+
+
+
 
 //Ajax push mesege http://api.jquery.com/jquery.ajax/
 

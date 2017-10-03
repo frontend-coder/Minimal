@@ -1,3 +1,266 @@
 @import '_var.scss';
 
 
+/* оформление содержимого над самой нартикой ниже top line */
+.block {
+	padding: 50px 0;
+}
+
+
+// second block
+
+/*  3 тумб преимуществ в ряд */
+ul.tambl_row-three {
+  margin: 0;
+  margin-bottom: -1%;
+  margin-left: -1%;
+  padding: 0;
+  list-style-type: none;
+   }
+
+.tambl_item-three {
+  float: left;
+  width: 32.33333%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  padding: 0 5px;
+  text-align: center; }
+
+.tambl-title {
+  text-transform: uppercase;
+ @include font-size(22px);
+  margin-bottom: 10px; }
+
+.title-text {
+ @include font-size(14px);
+
+   }
+
+.icon {
+  width: 81px;
+  height: 70px;
+  display: inline-block;
+margin-bottom: 36px;
+}
+
+h2.block_title {
+	font-family: "OpenSansBold", sans-serif;
+	@include font-size(30px);
+	text-align: center;
+	margin: 0 auto 20px auto;
+}
+
+.block_title {
+color:$color-block-descr;
+	text-align: center;
+	width: 60%;
+		margin: 0 auto 70px auto;
+}
+/* блок с видео проигрывателем    */
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow:hidden;
+}
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-wrape {
+	width: 60%;
+	margin:0 auto;
+}
+
+// оформление блока портфолио
+.block_line {
+border-top: 1px solid $button-hover;
+
+}
+.tambl_row {
+	padding: 0;
+	margin: 0;
+	  margin-bottom: -1%;
+  margin-right: -1%;
+}
+.tambl_row_item {
+  float: left;
+  width: 24%;
+  margin-right: 1%;
+ margin-bottom: 1%;
+	 text-align: center;
+padding: 0;
+}
+
+.portfolio {
+  position: relative;
+  overflow: hidden;
+transition: all 0.8s ease-out;
+}
+
+.portfolio img {
+	width: 100%;
+	height: auto;
+	// height: auto;
+	margin: 0; padding: 0;
+}
+.img-caption{
+position: absolute;
+width: 100%;
+padding-top: 10px;
+height: 20%;
+left: 0;
+right: 0;
+bottom: 3px;
+background: rgba(#575757, .8);
+color: #fff;
+cursor: pointer;
+text-align: center;
+font-size: 1.2rem;
+transition: all 0.8s ease-out;
+opacity: 0;
+}
+
+.img-caption a{
+	color: #fff;
+	text-decoration: none;
+}
+.portfolio:hover .img-caption{
+opacity: 1;
+}
+
+.block_subscribe {
+background-color: lighten($color-fon-subscribe, 40%);
+text-align: center;
+}
+
+
+// оформление блока с подпиской
+.block_subscribe {
+background-color: lighten($color-fon-subscribe, 40%);
+text-align: center;
+}
+
+// базовое оформление блока социальных сетей
+
+.block_s {
+  text-align: center;
+}
+
+ul.social {
+  padding: 0;
+margin: 0;
+  display: inline;
+
+}
+ul.social li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 50px;
+
+}
+ul.social li:last-child {
+margin-right: 0;
+  }
+
+
+ul.social li a {
+ display: inline-block;
+padding: 0;
+width: 50px;
+height: 50px;
+text-align: center;
+line-height: 50px;
+@include font-size(20px);
+border:1px solid  $button-hover;
+color: #ffffff;
+}
+
+
+
+footer {
+	background-color: $color-footer;
+	padding: 50px 0 40px 0;
+	color:#ffffff;
+}
+
+.footer_item {
+	width: 25%;
+	float: left;
+	margin: 0;
+	padding: 0 5px;
+
+}
+
+.footer_title {
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.footer_item ul {
+	padding: 0;
+}
+.footer_item ul li {
+list-style-type: none;
+margin-bottom: 12px;
+}
+.footer_item ul li:last-child {
+margin-bottom: 0;
+}
+
+.footer_item ul li a {
+color:#fff;
+text-decoration: none;
+@include trans;
+}
+.footer_item ul li a:hover {
+color: #efa448;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// стили для удления
+
+
+.block_padding {
+	height: 1000px;
+	padding: 50px 0;
+}
+
+.block_yellow {
+	background-color: yellow;
+}
+.block_black {
+	background-color: black ;
+}
+.block_orange {
+	background-color: orange ;
+}
+.block_blue {
+	background-color: blue ;
+}

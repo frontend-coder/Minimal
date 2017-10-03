@@ -73,7 +73,7 @@ gulp.task('css-libs', ['sass'], function () {
 gulp.task('scripts', function () {
  return gulp.src([
 'app/libs/jquery/jquery.min.js',
-// 'app/libs/magnific-popup/jquery.magnific-popup.min.js',
+'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 // 'app/libs/owlcarousel/owl.carousel.min.js',
 // 'app/libs/equalHeights/equalHeights.min.js',
 'app/libs/nicescroll/jquery.nicescroll.min.js',
